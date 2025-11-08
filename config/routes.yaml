@@ -3,3 +3,11 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+   # Route déclarée manuellement pour /calcul/{valeur}
+app_calcul:
+  path: /calcul/{valeur}
+  controller: App\Controller\MainController::indexter
+  methods: [GET]
+  requirements:
+    valeur: '^[0-9]{1,2}$|^100$'
