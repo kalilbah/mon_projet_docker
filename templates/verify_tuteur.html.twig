@@ -11,13 +11,13 @@
     <p>Aucun nom fourni.</p>
   {% else %}
     {% if found %}
-      <p>✅ Tuteur trouvé :</p>
+      <p>Tuteur trouvé :</p>
       <ul>
         <li>Prénom : {{ tuteur.prenom }}</li>
         <li>Nom : {{ tuteur.nom }}</li>
       </ul>
     {% else %}
-      <p>❌ Aucun tuteur avec le nom « {{ nomRecherche }} ».</p>
+      <p>Aucun tuteur avec le nom « {{ nomRecherche }} ».</p>
     {% endif %}
   {% endif %}
 
