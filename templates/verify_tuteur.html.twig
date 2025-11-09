@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Résultat de la recherche</title>
+</head>
+<body>
+  <h1>Résultat de la recherche</h1>
+
+  {% if nomRecherche is empty %}
+    <p>Aucun nom fourni.</p>
+  {% else %}
+    {% if found %}
+      <p>✅ Tuteur trouvé :</p>
+      <ul>
+        <li>Prénom : {{ tuteur.prenom }}</li>
+        <li>Nom : {{ tuteur.nom }}</li>
+      </ul>
+    {% else %}
+      <p>❌ Aucun tuteur avec le nom « {{ nomRecherche }} ».</p>
+    {% endif %}
+  {% endif %}
+
+  <p><a href="{{ path('app_search_tuteur') }}">Nouvelle recherche</a></p>
+</body>
+</html>

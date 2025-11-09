@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Recherche d’un tuteur</title>
+</head>
+<body>
+  <h1>Rechercher un tuteur</h1>
+
+  <form method="post" action="{{ path('app_verify_tuteur') }}">
+    <label for="nom">Nom du tuteur :</label>
+    <input type="text" id="nom" name="nom" required>
+    <button type="submit">Rechercher</button>
+  </form>
+
+  <p><a href="{{ path('app_tuteurs') }}">Voir la liste des tuteurs</a></p>
+</body>
+</html>

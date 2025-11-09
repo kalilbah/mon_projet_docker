@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des tuteurs</title>
+</head>
+<body>
+    <h1>Liste des tuteurs</h1>
+    <ul>
+        {% for tuteur in tuteurs %}
+            <li>{{ tuteur.prenom }} {{ tuteur.nom }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
